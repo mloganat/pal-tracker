@@ -37,7 +37,7 @@ public class TimeEntryController {
         if (!list.isEmpty()) {
             return new ResponseEntity<>(list, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(list, HttpStatus.OK);
         }
     }
 
