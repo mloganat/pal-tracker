@@ -1,6 +1,6 @@
 package test.pivotal.pal.tracker;
 
-import io.pivotal.pal.tracker.TimeEntry;
+import io.pivotal.pal.trackerapi.TimeEntry;
 import io.pivotal.pal.tracker.TimeEntryController;
 import io.pivotal.pal.tracker.TimeEntryRepository;
 import org.junit.Before;
@@ -31,9 +31,10 @@ public class TimeEntryControllerTest {
     public void testCreate() {
         long projectId = 123L;
         long userId = 456L;
-        TimeEntry timeEntryToCreate = new TimeEntry(projectId, userId, LocalDate.parse("2017-01-08"), 8);
-
         long timeEntryId = 1L;
+        TimeEntry timeEntryToCreate = new TimeEntry(timeEntryId, projectId, userId, LocalDate.parse("2017-01-08"), 8);
+
+
         TimeEntry expectedResult = new TimeEntry(timeEntryId, projectId, userId, LocalDate.parse("2017-01-08"), 8);
         doReturn(expectedResult)
             .when(timeEntryRepository)
