@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 chmod +x gradlew
-chmod +x scripts/migrate-databases.sh
+
 #
 # Copyright 2015 the original author or authors.
 #
