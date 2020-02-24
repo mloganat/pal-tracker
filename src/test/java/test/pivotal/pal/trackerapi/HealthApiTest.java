@@ -29,7 +29,7 @@ public class HealthApiTest {
     public void setUp() throws Exception {
         RestTemplateBuilder builder = new RestTemplateBuilder()
             .rootUri("http://localhost:" + port)
-            .basicAuthorization("user", "password");
+            .basicAuthentication("user", "password");
 
         restTemplate = new TestRestTemplate(builder);
     }
