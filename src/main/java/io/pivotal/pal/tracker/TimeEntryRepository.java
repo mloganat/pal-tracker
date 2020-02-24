@@ -5,13 +5,14 @@ import io.pivotal.pal.trackerapi.TimeEntry;
 import java.util.List;
 
 public interface TimeEntryRepository {
-    TimeEntry create(TimeEntry any);
 
-    TimeEntry find(long timeEntryId);
+    public TimeEntry create(TimeEntry timeEntry);
 
-    List<TimeEntry> list();
+    public TimeEntry find(long timeEntryId);
 
-    TimeEntry update(long eq, TimeEntry any);
+    public List<TimeEntry> list();
 
-    void delete(long timeEntryId);
+    public TimeEntry update(long id, TimeEntry timeEntry);
+
+    public void delete(long id);
 }

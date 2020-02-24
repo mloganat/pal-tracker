@@ -17,6 +17,14 @@ public class TimeEntry {
         this.hours = i;
     }
 
+    public TimeEntry(long projectId, long userId, LocalDate parse, int i) {
+//        this.id = timeEntryId;
+        this.projectId = projectId;
+        this.userId = userId;
+        this.date = parse;
+        this.hours = i;
+    }
+
     public TimeEntry() {
 
     }
